@@ -4,6 +4,9 @@ Utilized Angular, TypeScript, HTML/CSS for the development of the front-end and 
 
 #Note 
 After cloning project use 
+```
 npm i or npm install
-also run json:server
+```
+also run 
+```json:server```
 Thank You
