@@ -1,0 +1,139 @@
+
+  <!--!this.authService.isLoggedIn 
+  -->
+      
+                <nav class="navbar navbar-dark bg-warning">
+                    <div>
+                    <a class="navbar-brand" href="#">
+                      <img src="assets/img/wit.jpeg" width="30" height="30" alt="Witmates">
+                      Witmates Technology
+                    </a></div>
+                    <div *ngIf="!authService.checklogin()">
+                      
+                      <a routerLink="/login"> <button class="btn btn-primary">Login</button></a>
+                    </div>
+                    <div class="row"*ngIf="authService.checklogin()">
+                    <div class="col-md-auto" >
+                       <p style="color: brown;">Welcome {{authService.userName}}</p> 
+                    </div>
+                    <div class="col col-lg-2">
+                      <a routerLink="/login"><button class="btn btn-primary" (click)="logout()">Logout</button></a></div>
+                    </div>
+                </nav>
+      
+        <!-- <div *ngIf="" >
+          <nav class="navbar navbar-dark bg-warning">
+              <div>
+              <a class="navbar-brand" href="#">
+                <img src="assets/img/wit.jpeg" width="30" height="30" alt="Witmates">
+                Witmates Technology
+              </a></div>
+              
+              <button class="btn btn-primary" (click)="logout()">Logout</button>
+          </nav>
+        </div> -->
+ 
+       
+
+       
+      
+ 
+
+  
+    
+
+<!-- 
+  <app-first (greetEvent)="greet($event)"></app-first>  // for component interaction 
+<div ><p>by NgStyle</p>
+    <ul *ngFor="let person of people">
+        <li [ngStyle]="{'color':getColor(person.country)}"> {{ person.name }} ({{ person.country }})</li>
+      </ul>
+</div>
+<p>by ngClass</p>
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+    'text-success':person.country === 'UK',
+    'text-primary':person.country === 'USA',
+    'text-danger':person.country === 'HK'
+    }">
+    {{ person.name }} ({{ person.country }})
+    </li>
+  </ul>
+
+
+
+<div>
+   
+<div [ngSwitch]="switchValue">    
+<p *ngSwitchCase="1">You selected Monday</p>    
+<p *ngSwitchCase="2">You selected Tuesday</p>    
+<p *ngSwitchCase="3">You selected Wednesday</p>   
+<p *ngSwitchDefault>Sorry Invalid selection!!</p>    
+</div>`
+</div> -->
+
+<!-- <button [ngClass]="{'disable-control':save}">submit</button>
+
+
+<nav>
+    <ul>
+      <li><a routerLink="/first-component" routerLinkActive="active">First Component</a></li>
+      <li><a routerLink="/second-component" routerLinkActive="active">Second Component</a></li>
+    </ul>
+  </nav> -->
+<router-outlet></router-outlet>
+
+ <!-- <div *ngIf="save==true">
+<p>{{userArray|json}}</p>
+</div> -->
+ 
+<!--<button (click)="onClick($event)">Save</button>
+<input type="text" [value]="title"  [(ngModel)]="title">
+<h1>{{title}}</h1>
+{{message}}
+<br>
+<textarea  [(ngModel)]="message"></textarea>
+<div class="container" style="margin-top: 40px;">
+    <form [formGroup]="registrationForm">
+        <h1>Reactive Form</h1>
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input id="name" formControlName="userName" type="text" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="Password">Password: </label>
+            <input id="Password" formControlName="Password" type="password" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="name">Confirm Password: </label>
+            <input id="name" formControlName="confirmPassword" type="password" class="form-control" >
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary">
+         </div>
+    </form>
+    {{registrationForm.value|json}}
+</div>
+
+
+// service interaction  
+
+-->
+<!--
+<h1>Teachers</h1>
+<button (click)="greetStudents()">Greet student</button>
+<button (click)="appreciateStu()">Appreciate student</button>
+<app-first></app-first> 
+
+
+
+
+//lazy loading
+-->
+<!-- <li class="nav-item">  
+  <a class="nav-link" [routerLink]="['lazy-lading']">  
+     Lazy Loading  
+  </a>  
+</li>
+
+ -->

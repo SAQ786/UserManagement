@@ -1,0 +1,41 @@
+.card-img-top{
+    height:150px;
+    width:150px;
+    margin:1%;
+    padding:2px;
+    background: rgb(150, 150, 196);
+}
+.card{
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 5%;
+    height: 50%;
+    width: 50%;
+    background-color: #bda688;
+   box-sizing: border-box;
+   
+
+}
+.formStyle{
+    font-family: Sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color:rgb(29, 26, 26);
+    
+
+}
+
+.formRadious{
+    border-radius: 20px;
+}
+.check{
+    align-items: center;
+}
+agm-map{
+    height: 500px;
+  }
+  .btnStyle{
+    /* background-color: rgb(228, 161, 161); */
+    text-align: left;
+  }
+  

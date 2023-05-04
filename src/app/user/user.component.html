@@ -1,0 +1,79 @@
+
+<div class="containter">
+    
+    <div class="card">
+        <img class="card-img-top rounded mx-auto d-block" src="assets/img/user.jpg" alt="Card image cap">
+        <div class="card-body container">
+        <form class="form-horizontal row g-3" #update="ngForm"  (ngSubmit)="updateInfo(update)" >
+            
+            <div class="form-group col-6">
+                <label class="formStyle">Name</label>
+                <input #name="ngModel" class="col-sm-10" type="text" name="name" id="name" class="form-control formRadious" [(ngModel)]="user.name">
+            </div>
+            <div class="form-group col-6">
+                <label class="formStyle">User Name</label>
+                <input #name="ngModel" type="text" name="username" id="name"  class="form-control formRadious" [(ngModel)]="user.username">
+           </div>
+
+           <div class="form-group col-6">
+            <label class="formStyle">Phone</label>
+            <input #phone="ngModel" type="text" name="phone" id="phone" maxlength="10" class="form-control formRadious" [(ngModel)]="user.phone">
+           </div>
+
+           <div class="form-group col-6">
+            <label class="formStyle">Email</label>
+            <input #email="ngModel" type="text" name="email" id="email"  class="form-control formRadious" [(ngModel)]="user.email">
+           </div>
+           <div class="form-group col-6">
+               <label class="formStyle">Address</label><br>
+               <input type="textarea" class="form-control formRadious "  #address="ngModel"  name="address" [(ngModel)]="user.address">
+           </div>
+           <div class="form-group  col-6">
+            <label class="formStyle">Company</label>
+                <input #company="ngModel" type="text" name="company" class="form-control formRadious" [(ngModel)]="user.company"> 
+           </div>
+           <div class="form-group  col-6">
+            <label class="formStyle">Website</label>
+                <input #website="ngModel" type="text" name="website"  class="form-control formRadious" [(ngModel)]="user.website"> 
+           </div>
+           <div class="form-group col-6">
+           <label class="formStyle">Password</label>
+                <input #website="ngModel" type="text" name="password"  class="form-control formRadious" [(ngModel)]="user.password"> 
+           </div>
+     
+          <div class="form-group col-6">
+            <input type="submit" value="update" class="btn btn-primary form-control">
+          </div>
+          <div class="form-group col-6">
+            <input type="button" value="Add Location" (click)="openDialog(template)" class="btn btn-primary form-control">
+          </div>
+           
+         </form>
+
+         <div>
+            <button class="btn btn-primary btnStyle" (click)="onClick()">Back to Details Page</button>
+        </div>
+        </div>
+        
+    </div>
+   
+   
+</div>
+<ng-template #template >  
+    <div class="modelStyle container">
+    <div class="modal-header">  
+        <h2 class="modal-title pull-left" >Select Location</h2>  
+        <button type="button" class="close " aria-label="Close" (click)="modalRef.hide()">  
+        <span aria-hidden="true">×</span>  
+        </button>  
+    </div>  
+    <div class="modal-body">  
+        <agm-map [latitude]="latitude" [longitude]="longitude" (mapRightClick)="selectLocation($event)" >
+            <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+            
+        </agm-map>  
+    </div> 
+    </div>
+</ng-template>
+
+<!--[latitude]="latitude" [longitude]="longitude"-->

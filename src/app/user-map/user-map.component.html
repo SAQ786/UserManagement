@@ -1,0 +1,22 @@
+
+<!-- <div class="form-check form-switch d-flex justify-content-center toggle">
+    <input class="form-check-input" style="height:25px; width:60px; " type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label> -->
+<!-- </div> --> 
+<div class="containter" style="height: 100%;">
+<div class="form-check form-switch d-flex justify-content-end toggle">
+    <input class="form-check-input" style="height:20px; width:50px; display: block;" (change)="change($event)" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <!-- <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label> -->
+</div>
+  <agm-map  [fitBounds]="true">
+    <div *ngFor="let i of data">
+        <agm-marker [iconUrl]="$any(icon)" [latitude]="i.location.latitude" (dragEnd)="changeLocation($event,i.id)"   [longitude]="i.location.longitude" [markerDraggable]="draggable" [agmFitBounds]="true">
+            <agm-info-window [isOpen]="true" [disableAutoPan]="false">
+            <p class="para">{{i.name}}</p>
+            <p class="para">Phone:{{i.phone}}, Address:{{i.address}}</p>
+            
+            </agm-info-window>
+        </agm-marker>
+    </div>
+</agm-map>
+</div>

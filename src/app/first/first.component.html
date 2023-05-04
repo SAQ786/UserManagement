@@ -1,0 +1,98 @@
+<div class="container">
+   
+    <div class="row">
+        
+        <div class="col">
+            
+            <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+               <!-- {{_service.header}} -->
+                <div>
+                    <!-- <h1>{{_service.header ?'Add User':'Registration Form'}}</h1> -->
+                    <h1>{{newAction ?'':'Registration Form'}}</h1>
+                </div>
+                <!--<ng-template #other_content><h1>Registration Form</h1></ng-template>-->
+
+      
+                <div class="form-group">
+                     <label for="firstName"> Name</label>
+                     <input type="text" #userRef #name="ngModel"  maxlength="12" id="firstName" required [class.is-invalid]="!user.name && name.touched" class="form-control " name="firstName" [(ngModel)]="user.name" pattern="/^[A-Za-z]+$/" (input)="keyPressAlphabet($event)">
+                     <!-- <small class="text-danger"[class.d-none]="name.invalid && name.untouched">name is required</small> -->
+                     <P class="text-danger"> {{messageForFirstName}}  </P>
+                </div>
+                    
+                <div class="form-group">
+                     <label for="lastName">User Name</label>
+                     <input type="text" #lname="ngModel" maxlength="12" id="lastName" [class.is-invalid]="!user.username && lname.touched" class="form-control" name="lastName" [(ngModel)]="user.username" required (input)="keyPressAlpha($event)">
+                     <small class="text-danger"[class.d-none]="lname.invalid || lname.touched">name is required</small>  
+                    <p class="text-danger">{{messageForLastName}}</p>
+                </div>
+            
+                <div class="form-group">
+                     <label for="email">Email</label>
+                     <input #email="ngModel" type="email" id="email" #emailId="ngModel" [class.is-invalid]="!user.email&& emailId.touched" maxlength="20" class="form-control" name="email" [(ngModel)]="user.email" required (input)="emailCheck($event)">
+                     <!-- <small class="text-danger"[class.d-none]="emailId.valid || emailId.untouched">pls enter your Email Id  </small>    -->
+                     <P class="text-danger">{{messageForEmail}}  </P>
+               </div>
+
+               <div class="form-group">
+                     <label for="cell">Cell</label>
+                     <input type="tel" id="cell" #phone="ngModel" [class.is-invalid]="!user.phone && phone.touched" maxlength="10" pattern="[0-9]{10}" class="form-control" name="cell" [(ngModel)]="user.phone" (input)="keyPressNumbers($event)">
+                     <small class="text-danger"[class.d-none]="phone.valid || phone.untouched">Enter only 10 digits no</small>   
+                     <P class="text-danger">{{messageForPhone}}  </P>
+                </div>   
+
+                <div class="form-group checkbox">
+                    <label for="check" class="form-check-label">
+                     Address
+                    </label> 
+                    <input type="text"  name="address" class="form-control" #address="ngModel" [(ngModel)]="user.address">
+                </div>
+                    
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="user.password">
+                </div>
+                <div class="form-group">
+                    <label>Company</label>
+                    <input type="text" class="form-control" name="company" [(ngModel)]="user.company">
+                </div>
+                <div class="form-group">
+                    <label>website</label>
+                    <input type="text" class="form-control" name="website" [(ngModel)]="user.website">
+                </div>
+               
+
+
+              <br>
+                
+                <div class="form-group">
+                    <div class="d-flex justify-content">
+                         <div class="mx-3"> 
+                            <input  type="submit" class="btn btn-primary " [disabled]="!user.name||!user.username||!user.email||!user.phone ">
+                         </div>
+                        <!-- <div class="mx-3" *ngIf='_service.action'> 
+                             <button mat-dialog-close class="btn btn-primary"(click)="closeDilog()" >Close</button>
+                        </div> -->
+                    </div>
+<!--                     
+                     </div> -->
+                   <!-- <div mat-dialog-actions *ngIf='_service.action' class="btn-group  btnStyle">
+                    </div> -->
+                </div>
+
+                
+                <!-- <div id="div1" *ngIf="save==true">    
+                    <p>First Name is:{{newUser.firstName}}</p>
+                    <p>Last Name is:{{newUser.lastName}}</p>
+                    <p>Email is:{{newUser.email}}</p>
+                    <p>Phone No is:{{newUser.phone}}</p>
+                    <p>Is Admin:{{newUser.check}}</p>
+                </div> 
+                   <button (click)="callGreet()"></button>
+            -->
+            </form>
+           
+        </div>
+    </div>
+</div>
+

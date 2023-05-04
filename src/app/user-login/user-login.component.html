@@ -1,0 +1,33 @@
+
+
+
+<div class="container" style="margin-top: 5%; border: 1px solid;  width: 500px;">
+    <div class="col-12">
+        <h1  style="text-align: center;">User Login</h1>
+      
+        <form #login="ngForm" (ngSubmit)="onClick(login)">
+           
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input  type="email" id="email"   class="form-control" #email="ngModel" name="email"  required [(ngModel)]="user.email">
+                <p class="text-danger" style="font-size: small;" *ngIf="!move">{{message}}</p>
+                <p class="text-danger" style="font-size: small;" *ngIf="!move">{{message_for_email}}</p>
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input  type="password" id="password"   class="form-control" #password="ngModel" name="password"  required [(ngModel)]="user.password">
+                <p class="text-danger" style="font-size: small;">{{message_for_password}}</p>
+            </div>
+            <br>
+            <div class="form-group">
+                <button  class="btn btn-primary" [disabled]="!user.email || !user.password">Login</button>
+            </div>
+            <br>
+            <p>Don't have an account?<a routerLink="/registration"  class="link-danger" style="text-decoration:none"> Register</a></p>
+           
+            
+        </form>
+    </div>
+    </div>
+
+        

@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "phone": "1-463-123-4447",
+      "address": "vijay nagar Indore",
+      "password": "karianne@1234",
+      "company": "witmates",
+      "website": "kale.biz",
+      "location": {
+        "latitude": 15.927774703729318,
+        "longitude": 45.07892052303183
+      }
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "phone": "493-170-9623 x156",
+      "address": "South Elvis",
+      "password": "karianne@1234",
+      "company": "Robel-Corkery",
+      "website": "kale.biz",
+      "location": {
+        "latitude": 26.929041058286263,
+        "longitude": 75.80136445992446
+      }
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "phone": "(254)954-1289",
+      "address": "Roscoeview",
+      "password": "Kamren@1234",
+      "company": "Keebler LLC",
+      "website": "demarco.info",
+      "location": {
+        "latitude": 27.357909054988667,
+        "longitude": 89.56919948755193
+      }
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "phone": "1-477-935-8478 x6430",
+      "address": "South India",
+      "password": "denish@123",
+      "company": "Considine-Lockman",
+      "website": "dennis.com",
+      "location": {
+        "latitude": 29.557659874258633,
+        "longitude": 118.29946433452773
+      }
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "email": "Telly.Hoeger@billy.biz",
+      "phone": "210.067.6132",
+      "address": "Howemouth",
+      "password": "Elwyn@123",
+      "company": "Johns Group",
+      "website": "elvis.io",
+      "location": {
+        "latitude": 24.57597981748723,
+        "longitude": 73.75110082766696
+      }
+    },
+    {
+      "id": 8,
+      "name": "Absar",
+      "username": "Qureshi",
+      "email": "absar@gmail.com",
+      "phone": "7845120369",
+      "address": "chhindwara",
+      "password": "saq@123",
+      "company": "witmates",
+      "website": "kale.biz",
+      "location": {
+        "latitude": 20.412808868226264,
+        "longitude": 82.3976281542257
+      }
+    },
+    {
+      "id": 9,
+      "name": "Yasir",
+      "username": "yk",
+      "email": "yk@gmail.com",
+      "phone": "7845464546",
+      "address": "Barkuhi",
+      "password": "yk@123",
+      "company": "yk groups",
+      "website": "ykgroups.com",
+      "location": {
+        "latitude": 21.105509598753187,
+        "longitude": 99.12555869140624
+      }
+    }
+  ]
+}
